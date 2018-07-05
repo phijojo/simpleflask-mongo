@@ -1,0 +1,17 @@
+version: '3.1'
+
+services:
+  mongo:
+    image: mongo:3.6.5
+    restart: always
+    volumes:
+      - ./database:/dumpfile
+  app:
+    image: phijojo/simpleflask-mongo:latest
+    restart: always
+    ports:
+      - 5000:5000
+    environment:
+      FLASK_APP: run.py
+      FLASK_CONFIGURATION: dev
+      MONGO_URI: mongodb://mongo:27017/testdb
