@@ -17,12 +17,18 @@ To run this setup
 URLs
  GET
  http://0.0.0.0/songs
+ 
  http://0.0.0.0/songs/page/2
+ 
  http://songs/avg/difficulty/6
+ 
  http://0.0.0.0/songs/avg/rating/song_id
+ 
  http://0.0.0.0/songs/search/<keyword>
   
  POST:
  http://0.0.0.0/songs/rating
+ 
  parameters
+ 
 {song_id: id, rating:5}
